@@ -1,0 +1,88 @@
+﻿@model Pokedex5.Models.Pokemon
+@{
+    ViewBag.Title = $"{Model.Name.English}";
+}
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Message"]
+    </div>
+}
+<form method="post" asp-controller="Pokedex" asp-Action="Details">
+    <table class="table">
+        <tr>
+            <th>Image</th>
+            <td><img src="~/Images/@(Model.Id).png" /></td>
+        </tr>
+        <tr>
+            <th scope="row">Name</th>
+            <td>@Model.Name.English</td>
+        </tr>
+        <tr>
+            <th scope="row">Types</th>
+            <td>
+                <ul>
+                    @foreach (var type in Model.Type)
+                    {
+                        <li>@type</li>
+                    }
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Hp</th>
+            <td>
+                <input asp-for="Base.Hp" />
+                <div class="invalid-feedback" style="display:block;">
+                    <span asp-validation-for="Base.Hp"></span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Attack</th>
+            <td>
+                <input asp-for="Base.Attack" />
+                <div class="invalid-feedback" style="display:block;">
+                    <span asp-validation-for="Base.Attack"></span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Defense</th>
+            <td>
+                <input asp-for="Base.Defense" />
+                <div class="invalid-feedback" style="display:block;">
+                    <span asp-validation-for="Base.Defense"></span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Speed</th>
+            <td>
+                <input asp-for="Base.Speed" />
+                <div class="invalid-feedback" style="display:block;">
+                    <span asp-validation-for="Base.Speed"></span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Sp. Attack</th>
+            <td>
+                <input asp-for="Base.SpAttack" />
+                <div class="invalid-feedback" style="display:block;">
+                    <span asp-validation-for="Base.SpAttack"></span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Sp. Defense</th>
+            <td>
+                <input asp-for="Base.SpDefense" />
+                <div class="invalid-feedback" style="display:block;">
+                    <span asp-validation-for="Base.SpDefense"></span>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <button type="submit">Save</button>
+</form>
