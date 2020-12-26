@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Pokedex5.Models;
-using Pokedex5.ViewModels;
+using Pokedex6.Models;
+using Pokedex6.ViewModels;
 
-namespace Pokedex5.Controllers
+namespace Pokedex6.Controllers
 {
     public enum SortField
     {
@@ -58,7 +58,7 @@ namespace Pokedex5.Controllers
 
             return View(pokedexListViewModel);
         }
-
+        [HttpGet]
         public IActionResult Details(int id)
         {
             Pokemon pokemon = pokedex.Get(id);
@@ -80,6 +80,18 @@ namespace Pokedex5.Controllers
                 this.pokedex.Save(p);
             }
             return View(p);
+        }
+        [HttpPost]
+        public IActionResult Delete(int Id)
+        {
+            Pokemon p = pokedex.Get(Id);
+            if (p != null)
+            {
+                pokedex.Delete(p);
+                TempData["Message"] = $"{p.Name.English} was deleted succesfully!";
+                return RedirectToAction("Index", "Pokedex");
+            }
+            return NotFound();
         }
     }
 }

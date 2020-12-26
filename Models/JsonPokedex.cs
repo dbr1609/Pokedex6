@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Pokedex5.Models
+namespace Pokedex6.Models
 {
     public class JsonPokedex : IPokedex
     {
@@ -50,6 +50,11 @@ namespace Pokedex5.Models
         {
             var index = this.pokemons.FindIndex(p => p.Id == pokemon.Id);
             this.pokemons[index] = pokemon;
+        }
+
+        public void Delete(Pokemon pokemon)
+        {
+            this.pokemons.Remove(pokemon);
         }
     }
 }

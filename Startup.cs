@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Pokedex5.Models;
+using Pokedex6.Models;
 
-namespace Pokedex5
+namespace Pokedex6
 {
     public class Startup
     {

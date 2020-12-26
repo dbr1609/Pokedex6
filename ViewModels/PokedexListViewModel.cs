@@ -1,11 +1,11 @@
-﻿using Pokedex5.Controllers;
-using Pokedex5.Models;
+﻿using Pokedex6.Controllers;
+using Pokedex6.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pokedex5.ViewModels
+namespace Pokedex6.ViewModels
 {
     public class PokedexListViewModel
     {

@@ -8,13 +8,13 @@
     int i = 0;
 }
 <div class="btn-group" role="group" aria-label="Sort">
-    <a asp-action="Index" asp-route-sort="Id" asp-route-sortDirection="@Model.SortDirection" class="btn btn-secondary @(Model.SortField == Pokedex5.Controllers.SortField.Id?"active":"")">Id</a>
-    <a asp-action="Index" asp-route-sort="Name" asp-route-sortDirection="@Model.SortDirection" class="btn btn-secondary @(Model.SortField == Pokedex5.Controllers.SortField.Name?"active":"")">Name</a>
-    <a asp-action="Index" asp-route-sort="Type" asp-route-sortDirection="@Model.SortDirection" class="btn btn-secondary @(Model.SortField == Pokedex5.Controllers.SortField.Type?"active":"")">Type</a>
+    <a asp-action="Index" asp-route-sort="Id" asp-route-sortDirection="@Model.SortDirection" class="btn btn-secondary @(Model.SortField == Pokedex6.Controllers.SortField.Id?"active":"")">Id</a>
+    <a asp-action="Index" asp-route-sort="Name" asp-route-sortDirection="@Model.SortDirection" class="btn btn-secondary @(Model.SortField == Pokedex6.Controllers.SortField.Name?"active":"")">Name</a>
+    <a asp-action="Index" asp-route-sort="Type" asp-route-sortDirection="@Model.SortDirection" class="btn btn-secondary @(Model.SortField == Pokedex6.Controllers.SortField.Type?"active":"")">Type</a>
 </div>
 <div class="btn-group" role="group" aria-label="Sort direction">
-    <a asp-action="Index" asp-route-sort="@Model.SortField" asp-route-sortDirection="ASC" class="btn btn-secondary @(Model.SortDirection == Pokedex5.Controllers.SortDirection.ASC?"active":"")">Ascending</a>
-    <a asp-action="Index" asp-route-sort="@Model.SortField" asp-route-sortDirection="DESC" class="btn btn-secondary @(Model.SortDirection == Pokedex5.Controllers.SortDirection.DESC?"active":"")">Descending</a>
+    <a asp-action="Index" asp-route-sort="@Model.SortField" asp-route-sortDirection="ASC" class="btn btn-secondary @(Model.SortDirection == Pokedex6.Controllers.SortDirection.ASC?"active":"")">Ascending</a>
+    <a asp-action="Index" asp-route-sort="@Model.SortField" asp-route-sortDirection="DESC" class="btn btn-secondary @(Model.SortDirection == Pokedex6.Controllers.SortDirection.DESC?"active":"")">Descending</a>
 </div>
 <p></p>
 @foreach (Pokemon p in Model.Pokemons)

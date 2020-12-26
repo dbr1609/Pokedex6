@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pokedex5.Models
+namespace Pokedex6.Models
 {
     public interface IPokedex
     {
@@ -11,5 +11,6 @@ namespace Pokedex5.Models
         List<Pokemon> GetAll();
         public DateTime GeneratedAt { get; set; }
         void Save(Pokemon pokemon);
+        void Delete(Pokemon pokemon);
     }
 }

@@ -4,6 +4,6 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup>
-    <ActiveDebugProfile>Pokedex5</ActiveDebugProfile>
+    <ActiveDebugProfile>Pokedex6</ActiveDebugProfile>
   </PropertyGroup>
 </Project>

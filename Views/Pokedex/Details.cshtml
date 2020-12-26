@@ -1,12 +1,6 @@
-﻿@model Pokedex5.Models.Pokemon
+﻿@model Pokedex6.Models.Pokemon
 @{
     ViewBag.Title = $"{Model.Name.English}";
-}
-@if (TempData["Message"] != null)
-{
-    <div class="alert alert-success" role="alert">
-        @TempData["Message"]
-    </div>
 }
 <form method="post" asp-controller="Pokedex" asp-Action="Details">
     <table class="table">
@@ -84,5 +78,6 @@
             </td>
         </tr>
     </table>
-    <button type="submit">Save</button>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button asp-controller="Pokedex" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-primary">Delete</button> 
 </form>
